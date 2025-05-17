@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>탐구활동 업로드</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <img src="logo.png" alt="행신고 로고" class="logo">
+    <h1>탐구활동 업로드</h1>
+  </header>
+
+  <div class="container">
+    <section id="upload-form">
+      <h2>📝 탐구활동 업로드</h2>
+      <form id="researchForm">
+        <label>제목: <input type="text" name="title" required></label><br>
+        <label>작성자: <input type="text" name="author" required></label><br>
+        <label>학교: <input type="text" name="school"></label><br>
+        <label>분야: <input type="text" name="category"></label><br>
+        <label>태그:
+          <select name="tag">
+            <option value="science">과학</option>
+            <option value="mathematics">수학</option>
+            <option value="technology">기술</option>
+            <option value="art">예술</option>
+          </select>
+        </label><br>
+        <label>요약:<br>
+          <textarea name="abstract" rows="4" required></textarea>
+        </label><br>
+        <label>PDF 업로드:
+          <input type="file" name="file" accept=".pdf" required>
+        </label><br>
+        <button type="submit" class="btn">업로드</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    <a href="home.html">홈페이지로 돌아가기</a>
+  </footer>
+
+  <script src="upload.js"></script>
+</body>
+</html>

@@ -3,35 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>학생 탐구활동 공유소</title>
+  <title>HARA</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header class="site-header">
     <img src="logo.png" alt="행신고 로고" class="logo">
-    <h1>학생 탐구활동 공유소 (Student arXiv)</h1>
+    <h1>Haengshin Academic Research Archive</h1>
   </header>
 
   <div class="container">
-    <section id="upload-form">
-      <h2>📝 탐구활동 업로드</h2>
-      <form id="researchForm">
-        <label>제목: <input type="text" name="title" required></label><br>
-        <label>작성자: <input type="text" name="author" required></label><br>
-        <label>학교: <input type="text" name="school"></label><br>
-        <label>분야: <input type="text" name="category"></label><br>
-        <label>요약:<br>
-          <textarea name="abstract" rows="4" required></textarea>
-        </label><br>
-        <label>PDF 업로드:
-          <input type="file" name="file" accept=".pdf" required>
-        </label><br>
-        <button type="submit" class="btn">업로드</button>
-      </form>
-    </section>
-
-    <hr>
+    <nav id="filters">
+      <label for="tagFilter">태그 선택: </label>
+      <select id="tagFilter">
+        <option value="all">모든 태그</option>
+        <option value="science">과학</option>
+        <option value="mathematics">수학</option>
+        <option value="technology">기술</option>
+        <option value="art">예술</option>
+      </select>
+    </nav>
 
     <section id="recent-research">
       <h2>🧪 최근 업로드된 탐구활동</h2>
@@ -39,6 +31,10 @@
     </section>
   </div>
 
-  <script src="script.js"></script>
+  <footer>
+    <a href="upload.html">탐구활동 업로드</a>
+  </footer>
+
+  <script src="home.js"></script>
 </body>
 </html>
